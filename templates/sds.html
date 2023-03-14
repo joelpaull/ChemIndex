@@ -1,0 +1,13 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    SDS
+{% endblock %}
+
+{% block main %}
+    <form action="/sds" method="post">
+        <div>
+            <input autocomplete="off" autofocus class="form-control mx-auto w-auto mt-5" id="cas" name="cas" placeholder="CAS Number" type="text">
+        <button class="btn button btn-primary mt-3" type="submit">Search for SDS</button>
+    </form>
+{% endblock %}

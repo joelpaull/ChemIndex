@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Search
+{% endblock %}
+
+{% block main %}
+    <p class ="search_CAS">CAS Number for {{chemical}} : </p>
+    <p class="search_CAS_number">{{cas_number}}<p>
+        <div class ="mt-5">
+        <form action="/search_details" method="post">
+            <input id='chemical' type= "hidden" name = 'chemical' value = '{{chemical}}'>
+            <input id='cas_number' type= "hidden" name = 'cas_number' value = {{cas_number}}>
+            <button class="btn button btn-primary" type="submit">Save CAS</button>
+        </form>
+        </div>
+{% endblock %}

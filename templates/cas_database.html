@@ -1,0 +1,70 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    CAS Data
+{% endblock %}
+
+{% block main %}
+<script>
+    function search_table() {
+      // Declare variables
+      var input, filter, table, tr, td, i, txtValue;
+      //input from table
+      input = document.getElementById("search_input");
+      //make inout uppercase for comparison
+      filter = input.value.toUpperCase();
+      // specified table to look at
+      table = document.getElementById("cas_table");
+      // get rows in table
+      tr = table.getElementsByTagName("tr");
+    
+
+      // Loop through all table rows, and hide those who don't match the search
+      for (i = 0; i < tr.length; i++) {
+        // select only first element in each row
+        name_element = tr[i].getElementsByTagName("td")[0];
+        // if search value added, chemical name is assigned to txtValue
+        if (name_element) {
+
+            txtValue = name_element.innerText;
+            // searches for substring 'filter' in textValue and returns index, but return -1 if no element found
+            if (txtValue.toUpperCase().indexOf(filter) != -1) {
+                tr[i].style.display = "";
+            } else {
+            // display style = none therefore result hidden
+                tr[i].style.display = "none";
+            }
+        }
+      }
+    }
+    </script>
+    
+<main class="container py-5">
+
+    <input type="text" class="cd-search table-filter search" placeholder="Search Chemicals" 
+    data-table = "cas_table" id="search_input" onkeyup="search_table()"/>
+
+    <table class="table table-striped" id = "cas_table"name= "cas_table">
+        <thead>
+            <tr>
+                <th class="text-start">Chemical</th>
+                <th class="text-start">CAS Number</th>
+                
+            </tr>
+        </thead>
+       <tbody>
+        {% for chem in chemicals %}
+                <tr>
+                    <form action="/sds" method="post">
+                    <td class="text-start"> {{chem[0]}}</td>
+                    <td class="text-start">{{chem[1]}}</td>
+                    <input id='cas' type= "hidden" name = 'cas' value = {{chem[1]}}>
+                    <td class="text-start"> <button class ="button_sds_database btn btn-primary" type="submit">Find SDS</button></td>
+                    </form>
+                </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    
+        </main>
+{% endblock %}

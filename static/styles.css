@@ -1,0 +1,125 @@
+/* Size for Logo */
+nav .navbar-brand
+{
+    font-size: xx-large;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+/* Colors for Logo */
+.blue
+{
+    color: #5891e2;
+}
+.red
+{
+    color: #ee544c;
+}
+
+/* Button Config */
+.button{
+    background-color:orange;
+    border: none;
+  }  
+.button:hover{
+    background-color:red
+  }
+
+.buy_button{
+    background-color:orange;
+    border: none;
+    position: absolute;
+    margin-top: 110px;
+    margin-right: 120px;
+    width:200px;
+  }  
+.buy_button:hover{
+    background-color:red
+  }
+
+.button_sds_database{
+    background-color:orange;
+    color: white;
+    border: none;
+  }  
+
+.button_sds_database:hover{
+    background-color:red;
+    color: white;
+  }
+  
+.remove_button{
+    background-color:orange;
+    border: none;
+    position: absolute;
+    margin-top: 120px;
+    margin-right: 350px;
+    width:150px;
+  }  
+  .remove_button:hover{
+    background-color:red
+  }
+/* search_details config */
+
+.search {
+    display:flex;
+    flex-direction: row;
+    position: relative;
+    width:200px;
+}
+.search_CAS {
+    text-align: center;
+    color:#ee544c;
+    font-size: 20px;
+    margin-top:100px
+}
+.search_CAS_number {
+  text-align: center;
+  color:#5891e2;
+  font-size: 50px;
+  margin-top:20px
+}
+
+.buy_request {
+    padding-top: 4%;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    margin-right: 80px;
+
+  }
+
+  /* select config*/
+
+.select_tab {
+    position: absolute;
+    margin-top: 48px;
+    margin-left: 630px;
+    width:200px;
+}
+.priority_tab {
+    position: absolute;
+    margin-top: 110px;
+    margin-left: 0px;
+    width:200px;
+}
+
+/* Error Message config */
+.error {
+    text-align: center;
+    color:#ee544c;
+    font-size: 60px;
+    margin-top:100px
+}
+.error_message {
+    text-align: center;
+    color:#5891e2;
+    font-size: 40px;
+    margin-top:20px
+}
+
+/* drop-down config */
+.drop-list {
+  height: 40px;
+  align-self:last baseline;
+  width: 200px;
+}
