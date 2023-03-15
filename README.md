@@ -3,6 +3,8 @@
 
 #### Description:
   
+***For Original Location of Files See Repository CS50/final_project***
+
 Chemical management app designed for academic and commercial laboratories. This app has three main functions.
 
 Firstly, you can search for the unique identifier for any chemical, known as the CAS Registry Number, from any of its possible names using an API request from commonchemistry.cas.org. The obtained data is saved to a SQL database, which can be viewed in a tabulated layout in the app. You can also search through the table for a chemical using JavaScript. The app also features a submodule from GitHub that allows you to further search for the Safety Data Sheet (SDS) of any chemical, which is required when using any chemical in a laboratory.
