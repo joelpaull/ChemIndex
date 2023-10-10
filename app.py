@@ -223,7 +223,7 @@ def sds():
             return render_template("error.html", message = "Please Ensure You Input a Valid CAS Number")
         
         # Call find SDS function from Sub Module
-        filepath = "/Users/joelpaull/cs50/CS50/final_project/find_sds/find_sds/SDS"
+        filepath = os.getcwd() + "/find_sds/find_sds/SDS"
         cas = request.form.get("cas")
         
         # Ensure cas number is not letters
